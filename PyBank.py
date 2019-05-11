@@ -61,15 +61,12 @@ print("Greatest Decrease in Revenue:", low_month, "($" + str(low_revenue) + ")")
 
 print("\n\n")
 
-#with open(txt_output_path, mode='w', newline='') as budget_data_summary.txt:
-    #writer = csv.writer(budget_data_summary.txt)
+with open('budget_data_summary.txt', 'w') as text:
+    text.write("Financial Analysis for: " + input_file)
+    text.write("-" * 50)
+    text.write("Total Months: " + str(row_num))
+    text.write("Total Revenue: $" + str(revenue_sum))
+    text.write("Average Revenue Change: $" + str(round(avg_revenue_change)))
+    text.write("Greatest Increase in Revenue: " + str(high_month) + " ($" + str(high_revenue) + ")")
+    text.write("Greatest Decrease in Revenue: " + str(low_month) + " ($" + str(low_revenue) + ")")
 
-    #writer.writerows([
-     #   ["Financial Analysis for: " + input_file],
-     #   ["-" * 50],
-     #   ["Total Months: " + str(row_num)],
-     #   ["Total Revenue: $" + str(revenue_sum)],
-     #   ["Average Revenue Change: $" + str(round(avg_revenue_change))],
-     #   ["Greatest Increase in Revenue: " + str(high_month) + " ($" + str(high_revenue) + ")"],
-     #   ["Greatest Decrease in Revenue: " + str(low_month) + " ($" + str(low_revenue) + ")"]
-   # ])
